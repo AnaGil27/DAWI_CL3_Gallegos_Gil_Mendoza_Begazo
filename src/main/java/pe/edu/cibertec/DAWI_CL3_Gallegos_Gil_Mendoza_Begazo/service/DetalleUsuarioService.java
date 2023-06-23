@@ -12,10 +12,12 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
 import pe.edu.cibertec.DAWI_CL3_Gallegos_Gil_Mendoza_Begazo.model.bd.Rol;
 import pe.edu.cibertec.DAWI_CL3_Gallegos_Gil_Mendoza_Begazo.model.bd.Usuario;
 
+@Service
 public class DetalleUsuarioService implements UserDetailsService {
 	@Autowired
 	private UsuarioService usuarioService;
