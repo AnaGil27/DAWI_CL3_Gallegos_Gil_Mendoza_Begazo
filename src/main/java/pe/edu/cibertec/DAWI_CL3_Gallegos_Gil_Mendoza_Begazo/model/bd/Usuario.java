@@ -1,4 +1,5 @@
-package pe.edu.cibertec.DAWI_CL3_Gallegos_Gil_Mendoza_Begazo.model;
+package pe.edu.cibertec.DAWI_CL3_Gallegos_Gil_Mendoza_Begazo.model.bd;
+
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -23,9 +24,9 @@ import lombok.Setter;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name ="usuario")
+@Table(name = "usuario")
 public class Usuario {
-	@Id 
+	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idusuario;
 	@Column(name = "nomusuario")
@@ -38,11 +39,10 @@ public class Usuario {
 	private String nombres;
 	@Column(name = "apellidos")
 	private String apellidos;
-	
-	@ManyToMany(cascade = CascadeType.MERGE, 
-			fetch = FetchType.EAGER)
-	@JoinTable(name = "usuario_rol", 
-		joinColumns = @JoinColumn(name = "idusuario"),
-		inverseJoinColumns = @JoinColumn(name = "idrol"))
+	@Column(name = "activo")
+	private Boolean activo;
+
+	@ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+	@JoinTable(name = "usuario_rol", joinColumns = @JoinColumn(name = "idusuario"), inverseJoinColumns = @JoinColumn(name = "idrol"))
 	private Set<Rol> roles;
 }

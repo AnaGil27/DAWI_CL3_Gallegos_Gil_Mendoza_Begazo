@@ -1,4 +1,4 @@
-package pe.edu.cibertec.DAWI_CL3_Gallegos_Gil_Mendoza_Begazo.model;
+package pe.edu.cibertec.DAWI_CL3_Gallegos_Gil_Mendoza_Begazo.model.bd;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
