@@ -29,14 +29,14 @@ public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idusuario;
-	@Column(name = "nomusuario")
-	private String nomusuario;
+	@Column(name = "nombres")
+	private String nombres;
 	@Column(name = "email")
 	private String email;
 	@Column(name = "password")
 	private String password;
-	@Column(name = "nombres")
-	private String nombres;
+	@Column(name = "nomusuario")
+	private String nomusuario;
 	@Column(name = "apellidos")
 	private String apellidos;
 	@Column(name = "activo")

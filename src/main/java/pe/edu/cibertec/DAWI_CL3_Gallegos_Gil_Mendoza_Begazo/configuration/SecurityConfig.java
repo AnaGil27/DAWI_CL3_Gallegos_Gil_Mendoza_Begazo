@@ -26,8 +26,9 @@ public class SecurityConfig {
 		http
 			.authorizeHttpRequests()
 			.antMatchers("/auth/login",
-					"/auth/registrar",
+					"/auth/registrar",					
 					"/auth/guardarUsuario",
+					"/bienvenido",
 					"/resources/**",
 					"/static/**",
 					"/css/**",
