@@ -28,7 +28,7 @@ public class SecurityConfig {
 			.antMatchers("/auth/login",
 					"/auth/registrar",					
 					"/auth/guardarUsuario",
-					"/bienvenido",
+					"/auth/bienvenido",
 					"/resources/**",
 					"/static/**",
 					"/css/**",
@@ -40,7 +40,7 @@ public class SecurityConfig {
 			.formLogin().loginPage("/auth/login")
 			.usernameParameter("txtusuario")
 			.passwordParameter("txtpassword")
-			.defaultSuccessUrl("/bienvenido")
+			.defaultSuccessUrl("/auth/bienvenido",true)
 			.failureUrl("/auth/login?error=true")
 			.and()
 			.logout()

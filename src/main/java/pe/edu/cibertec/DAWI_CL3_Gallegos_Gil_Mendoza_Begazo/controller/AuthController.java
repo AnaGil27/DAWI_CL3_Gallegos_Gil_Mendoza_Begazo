@@ -27,6 +27,11 @@ public class AuthController {
 		return "auth/frmRegistro";
 	}
 	
+	@GetMapping("/bienvenido")
+	public String loginSuccess() {
+		return "auth/bienvenido";
+	}
+	
 	@PostMapping("/guardarUsuario")
 	public String guardarUsuario(@ModelAttribute Usuario usuario, Model model) {
 		usuarioService.guardarUsuario(usuario);

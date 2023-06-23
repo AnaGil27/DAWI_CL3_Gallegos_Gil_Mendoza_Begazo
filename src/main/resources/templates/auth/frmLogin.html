@@ -25,12 +25,12 @@
 						<form method="post" th:action="@{/auth/login}">
 							<div class="form-outline mb-4">
 								<label class="form-label" for="txtusuario">Usuario</label> <input
-									type="text" id="txtusuario" class="form-control" required />
+									type="text" id="txtusuario" name="txtusuario" class="form-control" required />
 							</div>
 
 							<div class="form-outline mb-4">
 								<label class="form-label" for="txtpassword">Password</label> <input
-									type="password" id="txtpassword" class="form-control" required/>
+									type="password" id="txtpassword" name="txtpassword" class="form-control" required/>
 							</div>
 
 							<div th:if="${param.error}" class="alert alert-danger"
